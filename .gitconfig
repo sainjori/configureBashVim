@@ -1,0 +1,8 @@
+[core]
+	autocrlf = false
+	editor = vim
+[user]
+	name = Bertan Yasar
+	email = bertan.yasar@dscsag.com
+[push]
+	default = simple
