@@ -2,7 +2,7 @@
 	autocrlf = false
 	editor = vim
 [user]
-	name = Bertan Yasar
+	name = bya
 	email = bertan.yasar@dscsag.com
 [push]
 	default = simple

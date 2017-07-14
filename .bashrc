@@ -118,6 +118,11 @@ gitAddCommit() {
 
         }
 
+gitCheckout() {
+            #do things with parameters like $1 such as
+                git checkout "$1"
+
+        }
 
 gitCommit() {
             #do things with parameters like $1 such as
@@ -134,6 +139,8 @@ gitAdd() {
 alias ac=gitAddCommit
 alias gc=gitCommit
 alias ga=gitAdd
+alias gco=gitCheckout
+alias grm='git rebase -i master'
 set -o vi
 set keymap vi-command
 set show-mode-in-prompt on
@@ -150,14 +157,20 @@ alias hm="cd ~"
 alias al="vim ~/.bashrc"
 alias src="source ~/.bashrc"
 alias fe="cd /mnt/c/ENTWICKLUNG/java/workspaces/monitoring-base/dashboard/dashboard-frontend"
-alias gb="git checkout -"
+alias gp="git checkout -"
 alias be="cd /mnt/c/ENTWICKLUNG/java/workspaces/monitoring-base/dashboard/dashboard-backend"
 alias sb="cd /mnt/c/Users/bya/workspace/sandbox"
-alias etr="cd /mnt/c/ENTWICKLUNG/java/workspaces/ectr_trunk"
+alias etr="cd /mnt/c/ENTWICKLUNG/java/workspaces/ectr_trIJ_0805"
+alias etr="cd /mnt/c/ENTWICKLUNG/java/workspaces/ectr_trunk_gitlap"
 alias mn="cd /mnt/c/ENTWICKLUNG/java/workspaces/monitoring-base"
 alias gst="git stash"
 alias gap="git stash apply stash@{0}"
-
+alias elog="cd /mnt/c/Users/bya/AppData/Local/Temp/SAP/ECTR/ectr-51/logs"
+alias sandvik="cd /mnt/c/ENTWICKLUNG/java/workspaces/eclipse_customer/cust-sandvik"
+alias inst46="cd /mnt/c/ENTWICKLUNG/ectr_installations/DSC-ECTR-46"
+alias inst51="cd /mnt/c/ENTWICKLUNG/ectr_installations/ECTR-51"
+alias subl="sublime_text.exe"
+alias ex="explorer.exe"
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
@@ -170,4 +183,6 @@ set -o vi
 export EDITOR="/usr/bin/vim"
 set show-mode-in-prompt on
 export PROMPT_DIRTRIM=2
+export PATH=$PATH:/mnt/c/Windows/System32
+export PATH=$PATH:/mnt/c/Programme/Sublime\ Text\ 3
 
